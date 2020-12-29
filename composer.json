@@ -1,0 +1,32 @@
+{
+    "name": "xraffsarr/cardinal",
+    "description": "Cardinal is a modular web micro-framework inspired by Laravel's MVC structure.",
+    "type": "project",
+    "version": "0.0.1",
+    "homepage": "https://github.com/0xRaffSarr/cardinal",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Raffaele Sarracino",
+            "email": "contacts@raffaelesarracinno.it",
+            "homepage": "http://raffaelesarracino.it",
+            "role": "Developer"
+        },
+        {
+            "name": "Gennaro Landolfi",
+            "email": "gennarolandolfi@codedwork.it",
+            "homepage": "http://gennarolandolfi.codedwork.it/",
+            "role": "Developer"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Cardinal\\" : "src/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "xraffsarr/cardinal-core": "9999999-dev"
+    }
+}
