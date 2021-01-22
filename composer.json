@@ -28,5 +28,8 @@
     "prefer-stable": true,
     "require": {
         "xraffsarr/cardinal-core": "9999999-dev"
+    },
+    "require-dev": {
+        "spatie/ray": "^1.15"
     }
 }
