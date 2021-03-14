@@ -8,7 +8,11 @@
   
   - [Fillable](#fillable)
   
+  - [Find](#find)
+  
   - [Create](#create)
+  
+  - [Update](#update)
 
 ## I model
 
@@ -47,6 +51,16 @@ $user->name;
 $user->name = 'Mario';
 ```
 
+#### Find
+
+Il metodo statico `find($key)`, permette di recuperare un dato model dal database, partendo dalla sua `primary key`.  Tale metodo restituisce il model desiderato se trovato, altrimenti resituisce `null`.
+
+```php
+$user = User::find(1);
+```
+
+> È possibile utilizzare anche il metodo `findOrFail($key)` il quale solleva un eccezione del tipo `ModelNotFound` se il model richiesto non viene trovato all'interno del database.
+
 #### Create
 
 ____
@@ -62,3 +76,19 @@ $user = User::create([
 ```
 
 L'esecuzione del metodo, restituisce un oggetto del relativo model con i vari attributi inizializzati con i valori indicati. L'inizializzazione delle informazioni avviene sulla base degli attributi del model indicati all'interno dell'attributo `fillable`.
+
+#### Update
+
+___
+
+Il metodo update, permette di aggiornare in modo rapido le informazioni del model. Anche in questo caso, esso accetta come parametro un `array associativo`.
+
+```php
+$user->update([
+   'name' => 'Mario',
+   'surname' => 'Bianchi',
+   'email' => 'm.rossi@example.com'
+]);
+```
+
+Tale metodo, restituisce un booleano il quale ha valore `true` se l'aggiornamento delle informazioni avviene con successo, `false` se l'aggiornamento delle informazioni fallisce.
